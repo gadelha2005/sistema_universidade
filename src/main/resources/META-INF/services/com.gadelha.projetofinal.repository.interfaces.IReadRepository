@@ -1,0 +1,3 @@
+com.gadelha.projetofinal.repository.aluno.concrete.AlunoRepository
+com.gadelha.projetofinal.repository.disciplina.concrete.DisciplinaRepository
+com.gadelha.projetofinal.repository.biblioteca.concrete.LivroRepository

@@ -1,0 +1,3 @@
+com.gadelha.projetofinal.gateway.aluno.concrete.AlunoJsonParser
+com.gadelha.projetofinal.gateway.biblioteca.concrete.LivroJsonParser
+com.gadelha.projetofinal.gateway.disciplina.concrete.DisciplinaJsonParser

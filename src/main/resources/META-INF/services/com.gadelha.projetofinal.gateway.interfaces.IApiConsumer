@@ -1,0 +1,3 @@
+com.gadelha.projetofinal.gateway.aluno.concrete.AlunoApiConsumer
+com.gadelha.projetofinal.gateway.biblioteca.concrete.LivroApiConsumer
+com.gadelha.projetofinal.gateway.disciplina.concrete.DisciplinaApiConsumer

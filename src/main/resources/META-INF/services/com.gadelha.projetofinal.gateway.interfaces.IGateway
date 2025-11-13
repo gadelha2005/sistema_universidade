@@ -1,0 +1,3 @@
+com.gadelha.projetofinal.gateway.aluno.concrete.AlunoGateway
+com.gadelha.projetofinal.gateway.biblioteca.concrete.LivroGateway
+com.gadelha.projetofinal.gateway.disciplina.concrete.DisciplinaGateway

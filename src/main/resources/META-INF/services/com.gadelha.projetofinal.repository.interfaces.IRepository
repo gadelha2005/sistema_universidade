@@ -1,0 +1,2 @@
+com.gadelha.projetofinal.repository.matricula.concrete.MatriculaRepository
+com.gadelha.projetofinal.repository.emprestimo.concrete.EmprestimoRepository
