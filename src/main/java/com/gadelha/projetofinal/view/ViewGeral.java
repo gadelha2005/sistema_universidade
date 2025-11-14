@@ -1,6 +1,8 @@
 package com.gadelha.projetofinal.view;
 
 import java.util.Scanner;
+
+import com.gadelha.projetofinal.config.DataInitializer;
 import com.gadelha.projetofinal.view.aluno.concrete.AlunoView;
 import com.gadelha.projetofinal.view.aluno.interfaces.IAlunoView;
 import com.gadelha.projetofinal.view.biblioteca.concrete.LivroView;
@@ -18,6 +20,7 @@ public class ViewGeral {
     
     public ViewGeral() {
         this.sc = new Scanner(System.in);
+        DataInitializer.inicializar();
     }
     
     public void iniciar() {
@@ -31,7 +34,7 @@ public class ViewGeral {
             System.out.println("1. Gerenciar Alunos");
             System.out.println("2. Gerenciar Disciplinas");
             System.out.println("3. Gerenciar Livros");
-            System.out.println("4. Gerenciar Matrículas Simuladas");
+            System.out.println("4. Gerenciar Matrículas");
             System.out.println("5. Gerenciar Empréstimos");
             System.out.println("0. Sair do Sistema");
             System.out.print("Escolha uma opção: ");

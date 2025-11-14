@@ -2,8 +2,6 @@ package com.gadelha.projetofinal.controller.matricula.concrete;
 
 import java.util.List;
 import java.util.ServiceLoader;
-
-import com.gadelha.projetofinal.config.RepositoryInitializer;
 import com.gadelha.projetofinal.controller.matricula.interfaces.IMatriculaController;
 import com.gadelha.projetofinal.model.matricula.Matricula;
 import com.gadelha.projetofinal.service.matricula.interfaces.IMatriculaService;
@@ -16,7 +14,6 @@ public class MatriculaController implements IMatriculaController{
 
     public MatriculaController(IMatriculaView iMatriculaSimuladaView){
         this.iMatriculaSimuladaView = iMatriculaSimuladaView;
-        RepositoryInitializer.garantirInicializado();
         this.iMatriculaSimuladaService = carregarServico();
     }
 

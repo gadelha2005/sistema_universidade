@@ -2,7 +2,6 @@ package com.gadelha.projetofinal.controller.emprestimo.concrete;
 
 import java.util.ServiceLoader;
 
-import com.gadelha.projetofinal.config.RepositoryInitializer;
 import com.gadelha.projetofinal.controller.emprestimo.interfaces.IEmprestimoController;
 import com.gadelha.projetofinal.service.emprestimo.interfaces.IEmprestimoService;
 import com.gadelha.projetofinal.view.emprestimo.interfaces.IEmprestimoView;
@@ -14,7 +13,6 @@ public class EmprestimoController implements IEmprestimoController {
 
     public EmprestimoController(IEmprestimoView iEmprestimoView) {
         this.iEmprestimoView = iEmprestimoView;
-        RepositoryInitializer.garantirInicializado();
         this.iEmprestimoService = carregarService();
     }
 

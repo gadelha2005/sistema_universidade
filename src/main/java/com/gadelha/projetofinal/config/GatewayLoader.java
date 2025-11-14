@@ -8,22 +8,17 @@ import com.gadelha.projetofinal.model.disciplina.Disciplina;
 
 public class GatewayLoader {
     
-    private GatewayLoader() {
-    }
+    private GatewayLoader() {}
     
     @SuppressWarnings("unchecked")
-    public static <T> IGateway<T> carregarGateway(String gateaway) {
+    private static <T> IGateway<T> carregarGateway(String nomeGateway) {
         ServiceLoader<IGateway> loader = ServiceLoader.load(IGateway.class);
         return loader.stream()
-            .filter(provider -> {
-                String className = provider.get().getClass().getSimpleName();
-                return className.contains(gateaway);
-            })
+            .filter(provider -> provider.get().getClass().getSimpleName().contains(nomeGateway))
             .findFirst()
             .map(provider -> (IGateway<T>) provider.get())
-            .orElseThrow(() -> new RuntimeException(gateaway + " não encontrado"));
+            .orElseThrow(() -> new RuntimeException(nomeGateway + " não encontrado"));
     }
-    
     
     public static IGateway<Aluno> carregarAlunoGateway() {
         return carregarGateway("AlunoGateway");

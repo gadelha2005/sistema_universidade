@@ -3,7 +3,7 @@ package com.gadelha.projetofinal.controller.biblioteca.concrete;
 import java.util.List;
 import java.util.ServiceLoader;
 
-import com.gadelha.projetofinal.config.RepositoryInitializer;
+
 import com.gadelha.projetofinal.controller.biblioteca.interfaces.ILivroController;
 import com.gadelha.projetofinal.model.biblioteca.Livro;
 import com.gadelha.projetofinal.service.biblioteca.interfaces.ILivroService;
@@ -16,7 +16,6 @@ public class LivroController implements ILivroController {
 
     public LivroController(ILivroView iLivroView) {
         this.iLivroView = iLivroView;
-        RepositoryInitializer.garantirInicializado();
         this.iLivroService = carregarService();
     }
 

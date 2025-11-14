@@ -101,7 +101,13 @@ public class EmprestimoService implements IEmprestimoService {
     }
 
     private void validarEmprestimo(Aluno aluno, Livro livro) {
-       
+
+        System.out.println("DEBUG - Validando empréstimo:");
+        System.out.println("DEBUG - Aluno ID: " + aluno.getId() + ", Ativo: " + aluno.estaAtivo());
+        System.out.println("DEBUG - Livro ID: " + livro.getId() + ", Título: " + livro.getTitulo());
+        System.out.println("DEBUG - Status do livro: " + livro.getStatus());
+        System.out.println("DEBUG - Livro disponível: " + livro.estaDisponivel());
+        
         if (!aluno.estaAtivo()) {
             throw new IllegalStateException("Aluno com matrícula trancada não pode realizar empréstimos");
         }

@@ -3,7 +3,7 @@ package com.gadelha.projetofinal.controller.disciplina.concrete;
 import java.util.List;
 import java.util.ServiceLoader;
 
-import com.gadelha.projetofinal.config.RepositoryInitializer;
+
 import com.gadelha.projetofinal.controller.disciplina.interfaces.IDisciplinaController;
 import com.gadelha.projetofinal.model.disciplina.Disciplina;
 import com.gadelha.projetofinal.service.disciplina.interfaces.IDisciplinaService;
@@ -16,7 +16,6 @@ public class DisciplinaController implements IDisciplinaController {
 
     public DisciplinaController(IDisciplinaView iDisciplinaView) {
         this.iDisciplinaView = iDisciplinaView;
-         RepositoryInitializer.garantirInicializado();
         this.iDisciplinaService = carregarService();
     }
 

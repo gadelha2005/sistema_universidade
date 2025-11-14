@@ -114,10 +114,7 @@ public class EmprestimoView implements IEmprestimoView {
         System.out.println("Data de Devolução Prevista: " + emprestimo.getDataDevolucaoPrevista());
         System.out.println("Data de Devolução Real: " + 
             (emprestimo.getDataDevolucaoReal() != null ? emprestimo.getDataDevolucaoReal() : "Não devolvido"));
-        System.out.println("Status: " + 
-            (emprestimo.estaAtivo() ? 
-                (emprestimo.estaAtrasado() ? "ATRASADO" : "ATIVO") : 
-                "DEVOLVIDO"));
+        System.out.println("Status: " + emprestimo.obterStatusDescricao());
         System.out.println();
     }
 
@@ -137,10 +134,7 @@ public class EmprestimoView implements IEmprestimoView {
             System.out.println("Livro: " + emprestimo.getLivro().getTitulo());
             System.out.println("Data Empréstimo: " + emprestimo.getDataEmprestimo());
             System.out.println("Data Devolução Prevista: " + emprestimo.getDataDevolucaoPrevista());
-            System.out.println("Status: " + 
-                (emprestimo.estaAtivo() ? 
-                    (emprestimo.estaAtrasado() ? "ATRASADO" : "ATIVO") : 
-                    "DEVOLVIDO"));
+            System.out.println("Status: " + emprestimo.obterStatusDescricao());
             System.out.println("---");
         }
     }

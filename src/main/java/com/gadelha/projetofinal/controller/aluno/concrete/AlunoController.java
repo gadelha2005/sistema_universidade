@@ -3,7 +3,7 @@ package com.gadelha.projetofinal.controller.aluno.concrete;
 import java.util.List;
 import java.util.ServiceLoader;
 
-import com.gadelha.projetofinal.config.RepositoryInitializer;
+
 import com.gadelha.projetofinal.controller.aluno.interfaces.IAlunoController;
 import com.gadelha.projetofinal.service.aluno.interfaces.IAlunoService;
 import com.gadelha.projetofinal.view.aluno.interfaces.IAlunoView;
@@ -16,7 +16,6 @@ public class AlunoController implements IAlunoController {
 
     public AlunoController(IAlunoView visao) {
         this.iAlunoView = visao;
-        RepositoryInitializer.garantirInicializado();
         this.iAlunoService = carregarService();
     }
  

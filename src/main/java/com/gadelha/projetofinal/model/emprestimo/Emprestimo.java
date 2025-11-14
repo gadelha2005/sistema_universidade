@@ -14,7 +14,7 @@ public class Emprestimo {
     private LocalDate dataDevolucaoPrevista;
     private LocalDate dataDevolucaoReal;
 
-     public Emprestimo(int id, Aluno aluno, Livro livro, LocalDate dataEmprestimo, LocalDate dataDevolucaoPrevista) {
+    public Emprestimo(int id, Aluno aluno, Livro livro, LocalDate dataEmprestimo, LocalDate dataDevolucaoPrevista) {
         if (aluno == null) {
             throw new IllegalArgumentException("O aluno não pode ser nulo.");
         }
@@ -49,6 +49,17 @@ public class Emprestimo {
     
     public boolean foiDevolvido() {
         return dataDevolucaoReal != null;
+    }
+    
+    // NOVO MÉTODO: Lógica movida da view para o model
+    public String obterStatusDescricao() {
+        if (foiDevolvido()) {
+            return "DEVOLVIDO";
+        } else if (estaAtrasado()) {
+            return "ATRASADO";
+        } else {
+            return "ATIVO";
+        }
     }
     
     public long calcularDiasAtraso() {

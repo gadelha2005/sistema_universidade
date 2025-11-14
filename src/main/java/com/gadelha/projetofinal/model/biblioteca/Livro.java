@@ -17,10 +17,8 @@ public class Livro {
     }
 
     public boolean estaDisponivel(){
-        if(status.equalsIgnoreCase("disponivel")){
-            return true;
-        }
-        return false;
+        return "disponivel".equalsIgnoreCase(status) || 
+               "disponível".equalsIgnoreCase(status);
     }
 
     public int getId() {
